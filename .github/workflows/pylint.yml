@@ -20,12 +20,16 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files '*.py')
-    - name: Extract score
+        pylint $(git ls-files '*.py') > pylint_report.txt || true
+    - name: Extract pylint score
       id: extract_score
       run: |
-        score=$(grep "rated at" pylint-output.txt | sed -E 's/.*rated at ([0-9]+\.[0-9]+)\/10.*/\1/')
-        echo "score=$score" >> $GITHUB_OUTPUT
-    - name: Set badge label (optional)
-      run: |
-        echo "::set-output name=badge_url::https://img.shields.io/badge/pylint-${{ steps.extract_score.outputs.score }}%2F10-brightgreen"
+        SCORE=$(grep -oP '(?<=Your code has been rated at )[-0-9\.]+' pylint_report.txt)
+        echo "score=$SCORE" >> $GITHUB_OUTPUT
+        echo "Pylint score: $SCORE"
+
+    - name: Upload pylint report
+      uses: actions/upload-artifact@v4
+      with:
+        name: pylint-report
+        path: pylint_report.txt
