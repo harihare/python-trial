@@ -10,10 +10,6 @@ Simple CI Demo for Python code
 # Pylint report
 [![Pylint](https://github.com/rajeshsola/python-ci-demo/actions/workflows/pylint.yml/badge.svg)](https://github.com/rajeshsola/python-ci-demo/actions/workflows/pylint.yml)
 
-### Pylint badge  
-[![Pylint Score](https://img.shields.io/badge/pylint-8.5%20%2F%2010-yellow)](https://github.com/TechEvents-FOSS/python-trial/actions/workflows/pylint.yml)
-
-[![Pylint Score](https://img.shields.io/badge/pylint-9.8%20%2F%2010-brightgreen)](https://github.com/TechEvents-FOSS/python-trial/actions/workflows/pylint.yml)
-
+![Pylint Score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/TechEvents-FOSS/python-trial/badges/pylint-badge.json)
 
 
