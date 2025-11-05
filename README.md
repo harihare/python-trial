@@ -3,7 +3,7 @@ Simple CI Demo for Python code
 
 # Pytest Report
 
-[![Python App - Testing](https://github.com/TechEvents-FOSS/python-trial/actions/workflows/python-app.yml/badge.svg)](https://github.com/rajeshsola/python-ci-demo/actions/workflows/python-app.yml)
+[![Python App - Testing](https://github.com/TechEvents-FOSS/python-trial/actions/workflows/pytest.yml/badge.svg)](https://github.com/rajeshsola/python-ci-demo/actions/workflows/pytest.yml)
 
 # Pylint report
 [![Pylint](https://github.com/TechEvents-FOSS/python-trial/actions/workflows/pylint.yml/badge.svg)](https://github.com/rajeshsola/python-ci-demo/actions/workflows/pylint.yml)
